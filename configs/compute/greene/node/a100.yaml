@@ -1,0 +1,8 @@
+# @package compute
+
+gpu: a100
+nodes: ???
+gpus_per_node: ???
+mem_per_task: 120
+cpus_per_task: 16
+timeout: ${prod:60,24,2}

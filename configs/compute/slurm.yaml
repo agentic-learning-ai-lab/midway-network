@@ -1,0 +1,60 @@
+# @package _global_
+# This enables running a job on SLURM.
+# Please make sure to ONLY set the compute configs.
+
+defaults:
+  - _self_
+  - /compute/greene: 1x1
+  - /compute/greene/node: default
+  - override /hydra/launcher: submitit_slurm
+
+compute:
+  gpu: ???
+  nodes: ???
+  gpus_per_node: ???
+  mem_per_task: ???
+  cpus_per_task: ???
+  timeout: ???
+  exclude: null
+  resubmit: 2
+  partition: null
+
+experiment_dir: ${join_path:${hydra:sweep.dir},${hydra:sweep.subdir}}
+sub_name: ${hydra:sweep.subdir}
+
+hydra:
+  mode: MULTIRUN
+  sweep: # Naming convention for slurm sweep (or non-sweep jobs)
+    dir: ${base_output_dir}/${sub_dir}/${hydra.job.name}
+    subdir: ${limit_path_length:${replace_slash:${hydra.job.override_dirname}}}
+  job:
+    config:
+      override_dirname:
+        exclude_keys: # exclude overrides that are already used in naming, or are too long
+          - exp
+          - name
+          - compute.resubmit
+          - compute.timeout
+          - compute.cpus_per_task
+          - compute/greene
+          - compute/greene/node
+          - finetune
+          - output_dir
+          - sub_dir
+          - sub_name
+          - checkpoint
+  launcher:
+    submitit_folder: ${hydra.sweep.dir}/.submitit/%j
+    nodes: ${compute.nodes}
+    tasks_per_node: ${compute.gpus_per_node}
+    cpus_per_task: ${compute.cpus_per_task}
+    mem_gb: ${prod:${compute.mem_per_task},${compute.gpus_per_node}}
+    gres: "gpu:${compute.gpu}:${compute.gpus_per_node}"
+    timeout_min: ${compute.timeout}
+    exclude: ${compute.exclude}
+    partition: ${compute.partition}
+    constraint: ${compute.constraint}
+    setup: ["export SNAPSHOT_DIR=${hydra.sweep.dir}/.snapshot",
+            "export RESUBMIT_COUNT=${compute.resubmit}",
+            "export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)-ib0",
+            "export MASTER_PORT=$(for port in $(shuf -i 30000-65500 -n 20); do if [[ $(netstat -tupln 2>&1 | grep $port | wc -l) -eq 0 ]] ; then echo $port; break; fi; done;)"]

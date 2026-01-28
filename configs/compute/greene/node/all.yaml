@@ -1,0 +1,14 @@
+# @package _global_
+# Need to set to global as we need to modify the hydra.launcher.gres config.
+
+compute:
+  gpu: ALL
+  nodes: ???
+  gpus_per_node: ???
+  mem_per_task: 90
+  cpus_per_task: 12
+  timeout: ${prod:60,24,2}
+
+hydra:
+  launcher:
+    gres: "gpu:${compute.gpus_per_node}"

@@ -1,0 +1,114 @@
+# @package _global_
+
+defaults:
+  - _self_
+
+experiment: main
+sub_dir: midway_wt_venice
+
+# Model parameters
+arch: vit_small  # choices: [vit_tiny, vit_small, vit_base, xcit, deit_tiny, deit_small] + torchvision_archs
+patch_size: 16
+out_dim: 65536
+norm_last_layer: false
+momentum_teacher: 0.996
+use_bn_in_head: false
+dino_weight: 1.0
+num_register_tokens: 0
+
+# Temperature teacher parameters
+warmup_teacher_temp: 0.04
+teacher_temp: 0.04
+warmup_teacher_temp_epochs: 0
+
+# Training/Optimization parameters
+use_fp16: true
+weight_decay: 0.04
+weight_decay_end: 0.4
+clip_grad: 3.0
+batch_size_per_gpu: 20
+epochs: 100
+freeze_last_layer: 1
+lr: 5e-4
+warmup_epochs: 10
+min_lr: 1e-6
+optimizer: adamw  # choices: [adamw, sgd, lars]
+drop_path_rate: 0.1
+
+# Multi-crop parameters
+global_crops_scale: [0.4, 1.0]
+local_crops_number: 8
+local_crops_scale: [0.05, 0.4]
+initial_crop_scale: [0.05, 0.2]
+global_crop_resolution: [224, 224]
+motion_crop_scale: [0.2, 0.4]
+motion_crop_resolution: [224, 224]
+motion_crop_ratio: [0.75, 1.3333]
+motion_crop_jitter: null
+motion_crop_aug: true
+motion_affine_aug_params: {}
+mask_p: 1
+enc_mask_scale: null
+pred_mask_scale: null
+mask_aspect_ratio: [0.75, 1.5]
+mask_npred: 4
+mask_min_keep: 10
+use_dino_motion_crops: false
+
+# Latent motion parameters
+midway_weights: [1, 1, 1]
+midway_start_epoch: 0
+motion_feature_levels: [2, 5, 8, 11]
+midway_model_configs:
+  motion_out_dim: 4096
+  use_pos_embed: True
+  feature_block_type: cross
+  feature_depth: 1
+  num_feature_heads: 6
+  shared_feature_block: False
+  train_lateral: True
+  use_cls_token: True
+  motion_dim: 192
+  motion_depth: 4
+  num_motion_heads: 3
+  motion_tokens: 10
+  motion_agg_type: add
+  shared_motion: False
+  motion_pred_input: True
+  gating_type: pred-vector
+  gating_bias: 4
+  gating_tau: null
+  pred_type: self
+  predictor_depth: 4
+  num_pred_heads: 6
+  pos_embed_mode: learn
+  pred_tau: null
+  pred_registers: 0
+  shared_forward: False
+  motion_head_type: identity
+  target_type: forward
+
+# Dataset parameters
+data_path: '/vast/ch3451/datasets/decoded-walking-tours/Venice'
+dataset: walking_tours_decoded  # choices: [bdd100k, walking_tours, walking_tours_decoded]
+meta_info_file: null
+repeat_sample: 5
+backend: torchvision-videoreader
+delta_t: [15, 30]
+dataset_fraction: null
+
+# Misc
+wandb: True
+checkpoint: null
+vis_freq: null
+saveckp_freq: 50
+seed: 0
+num_workers: 20
+dist_url: env://
+
+# Eval
+eval: false
+eval_freq: 1000
+eval_script: '/scratch/ch3451/flow-ssl/repos/mmsegmentation/scripts/latent-motion/slurm/ade-upernet-vit-finetune-60k.sh'
+eval_config: '/scratch/ch3451/flow-ssl/repos/mmsegmentation/configs/latent-motion/finetune-upernet_vit-s16_1xb4-60k_ade20k-flowe-512x512.py'
+ 

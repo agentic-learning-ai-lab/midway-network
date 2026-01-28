@@ -1,0 +1,19 @@
+# @package _global_
+# This enables running a job on SLURM.
+# Please make sure to ONLY set the compute configs.
+
+defaults:
+  - _self_
+  - override /hydra/launcher: submitit_local
+
+experiment_dir: ${hydra:run.dir}
+
+hydra:
+  mode: RUN
+  job:
+    num: 0
+  run: 
+    dir: ${base_output_dir}/.LOCAL/${sub_dir}/${hydra.job.name}
+  sweep: # Naming convention for slurm sweep (or non-sweep jobs)
+    dir: ${hydra.run.dir}
+    subdir: ""

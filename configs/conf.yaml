@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - compute: slurm # must be slurm or local
+  - exp: ???
+
+base_output_dir: /scratch/midway-network/experiments
+experiment: ???
+sub_dir: ${experiment}
+name: ???
+
+experiment_dir: ???
+
+hydra:
+  job:
+    name: ${name}
+  callbacks:
+    log_job_return_callback:
+      _target_: submitit_hydra.LogJobReturnCallback
+    

@@ -1,0 +1,11 @@
+# @package _global_
+
+defaults:
+  - midway_bdd
+  - _self_
+
+arch: vit_base
+
+motion_model_configs:
+  motion_dim: 384
+

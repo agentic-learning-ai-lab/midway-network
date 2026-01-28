@@ -1,0 +1,8 @@
+# @package compute
+
+gpu: 0
+nodes: ???
+gpus_per_node: ??? # HACK: not-0 because this is actually only used to set tasks
+mem_per_task: 90
+cpus_per_task: 32
+timeout: ${prod:60,24,2}
