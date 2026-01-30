@@ -2,6 +2,38 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+section.hero.is-small {
+  padding: 0.25rem !important;
+  margin: 0 !important;
+}
+
+section.hero.is-small .hero-body {
+  padding: 0.5rem 1.5rem !important;
+}
+
+section.hero.is-small .columns {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+section.hero.is-small .column {
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+section.hero.is-small .title {
+  margin-bottom: 0.5rem !important;
+}
+
+section.hero.is-small .container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+section.hero.is-small .content {
+  margin-bottom: 0 !important;
+}
+
 
 .footer .icon-link {
     font-size: 25px;

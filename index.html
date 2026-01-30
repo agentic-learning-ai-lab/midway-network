@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Object recognition and motion understanding are key components of perception that complement each other. While self-supervised learning methods have shown promise in their ability to learn from unlabeled data, they have primarily focused on obtaining rich representations for either recognition or motion rather than both in tandem. On the other hand, latent dynamics modeling has been used in decision making to learn latent representations of observations and their transformations over time for control and planning tasks. In this work, we present Midway Network, a new self-supervised learning architecture that is the first to learn strong visual representations for both object recognition and motion understanding solely from natural videos, by extending latent dynamics modeling to this domain. Midway Network leverages a midway top-down path to infer motion latents between video frames, as well as a dense forward prediction objective and hierarchical structure to tackle the complex, multi-object scenes of natural videos. We demonstrate that after pretraining on two large-scale natural video datasets, Midway Network achieves strong performance on both semantic segmentation and optical flow tasks relative to prior self-supervised learning methods. We also show that Midway Network's learned dynamics can capture high-level correspondence via a novel analysis method based on forward feature perturbation.">
+  <meta name="description" content="Object recognition and motion understanding are key components of perception that complement each other. While self-supervised learning methods have shown promise in their ability to learn from  unlabeled data, they have primarily focused on obtaining rich representations for either recognition or  motion rather than both in tandem. On the other hand, latent dynamics modeling has been used in  decision making to learn latent representations of observations and their transformations over time for  control and planning tasks. In this work, we present Midway Network, a new self-supervised learning  architecture that is the first to learn strong visual representations for both object recognition and motion  understanding solely from natural videos, by extending latent dynamics modeling to this domain. Midway  Network leverages a midway top-down path to infer motion latents between video frames, as well as a  dense forward prediction objective and hierarchical structure to tackle the complex, multi-object scenes of  natural videos. We demonstrate that after pretraining on two large-scale natural video datasets, Midway  Network achieves strong performance on both semantic segmentation and optical flow tasks relative to  prior self-supervised learning methods. We also show that Midway Network’s learned dynamics can  capture high-level correspondence via a novel analysis method based on forward feature perturbation.">
   <meta property="og:title" content="Midway Network: Learning Representations for Recognition and Motion from Latent Dynamics"/>
-  <meta property="og:description" content="Object recognition and motion understanding are key components of perception that complement each other. While self-supervised learning methods have shown promise in their ability to learn from unlabeled data, they have primarily focused on obtaining rich representations for either recognition or motion rather than both in tandem. On the other hand, latent dynamics modeling has been used in decision making to learn latent representations of observations and their transformations over time for control and planning tasks. In this work, we present Midway Network, a new self-supervised learning architecture that is the first to learn strong visual representations for both object recognition and motion understanding solely from natural videos, by extending latent dynamics modeling to this domain. Midway Network leverages a midway top-down path to infer motion latents between video frames, as well as a dense forward prediction objective and hierarchical structure to tackle the complex, multi-object scenes of natural videos. We demonstrate that after pretraining on two large-scale natural video datasets, Midway Network achieves strong performance on both semantic segmentation and optical flow tasks relative to prior self-supervised learning methods. We also show that Midway Network's learned dynamics can capture high-level correspondence via a novel analysis method based on forward feature perturbation."/>
+  <meta property="og:description" content="Object recognition and motion understanding are key components of perception that complement each other. While self-supervised learning methods have shown promise in their ability to learn from  unlabeled data, they have primarily focused on obtaining rich representations for either recognition or  motion rather than both in tandem. On the other hand, latent dynamics modeling has been used in  decision making to learn latent representations of observations and their transformations over time for  control and planning tasks. In this work, we present Midway Network, a new self-supervised learning  architecture that is the first to learn strong visual representations for both object recognition and motion  understanding solely from natural videos, by extending latent dynamics modeling to this domain. Midway  Network leverages a midway top-down path to infer motion latents between video frames, as well as a  dense forward prediction objective and hierarchical structure to tackle the complex, multi-object scenes of  natural videos. We demonstrate that after pretraining on two large-scale natural video datasets, Midway  Network achieves strong performance on both semantic segmentation and optical flow tasks relative to  prior self-supervised learning methods. We also show that Midway Network’s learned dynamics can  capture high-level correspondence via a novel analysis method based on forward feature perturbation."/>
   <meta property="og:url" content="https://agenticlearning.ai/midway-network/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/figure1.png" />
@@ -15,7 +15,7 @@
 
 
   <meta name="twitter:title" content="Midway Network: Learning Representations for Recognition and Motion from Latent Dynamics">
-  <meta name="twitter:description" content="Object recognition and motion understanding are key components of perception that complement each other. While self-supervised learning methods have shown promise in their ability to learn from unlabeled data, they have primarily focused on obtaining rich representations for either recognition or motion rather than both in tandem. On the other hand, latent dynamics modeling has been used in decision making to learn latent representations of observations and their transformations over time for control and planning tasks. In this work, we present Midway Network, a new self-supervised learning architecture that is the first to learn strong visual representations for both object recognition and motion understanding solely from natural videos, by extending latent dynamics modeling to this domain. Midway Network leverages a midway top-down path to infer motion latents between video frames, as well as a dense forward prediction objective and hierarchical structure to tackle the complex, multi-object scenes of natural videos. We demonstrate that after pretraining on two large-scale natural video datasets, Midway Network achieves strong performance on both semantic segmentation and optical flow tasks relative to prior self-supervised learning methods. We also show that Midway Network's learned dynamics can capture high-level correspondence via a novel analysis method based on forward feature perturbation.">
+  <meta name="twitter:description" content="Object recognition and motion understanding are key components of perception that complement each other. While self-supervised learning methods have shown promise in their ability to learn from  unlabeled data, they have primarily focused on obtaining rich representations for either recognition or  motion rather than both in tandem. On the other hand, latent dynamics modeling has been used in  decision making to learn latent representations of observations and their transformations over time for  control and planning tasks. In this work, we present Midway Network, a new self-supervised learning  architecture that is the first to learn strong visual representations for both object recognition and motion  understanding solely from natural videos, by extending latent dynamics modeling to this domain. Midway  Network leverages a midway top-down path to infer motion latents between video frames, as well as a  dense forward prediction objective and hierarchical structure to tackle the complex, multi-object scenes of  natural videos. We demonstrate that after pretraining on two large-scale natural video datasets, Midway  Network achieves strong performance on both semantic segmentation and optical flow tasks relative to  prior self-supervised learning methods. We also show that Midway Network’s learned dynamics can  capture high-level correspondence via a novel analysis method based on forward feature perturbation.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/figure1.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -44,6 +44,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <!-- Lab Header -->
@@ -58,7 +60,7 @@
 
 
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body" style="padding-bottom: 0;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -73,14 +75,15 @@
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><small>New York University</small></span>
-                      <!-- <br>Conferance name and year</span> -->
                   </div>
+
+                  <div class="is-size-5">ICLR 2026</div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="#" 
+                        <a href="https://arxiv.org/abs/2510.05558" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -97,9 +100,19 @@
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
-                  </a>
-                </span>
+                    </a>
+                  </span>
 
+                  <!-- Models link-->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/agentic-learning-ai-lab/Midway-Network" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-brain"></i>
+                    </span>
+                    <span>Models</span>
+                    </a>
+                  </span>
             </div>
           </div>
         </div>
@@ -108,13 +121,52 @@
   </div>
 </section>
 
+<!-- TL;DR -->
+<section class="hero is-small" style="margin: 0; padding: 0;">
+  <div class="hero-body" style="padding: 0;">
+    <div class="container">
+      <div class="columns is-centered" style="margin: 0;">
+        <div class="column is-four-fifths" style="padding: 0.5rem 0.75rem;">
+          <div style="background-color: #f5f1eb; border-radius: 12px; padding: 1rem 1.5rem; text-align: left;">
+            <p style="margin-bottom: 0;"><strong>TL;DR:</strong> Midway Network is the first SSL architecture to learn visual representations for both object recognition and motion understanding from natural videos, by extending latent dynamics modeling with a hierarchical refinement formulation and dense forward prediction objective.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Overview -->
+<section class="hero is-small" style="margin: 0; padding: 0;">
+  <div class="hero-body" style="padding: 0;">
+    <div class="container">
+      <div class="columns is-centered" style="margin: 0;">
+        <div class="column is-four-fifths" style="padding: 0.25rem 0.75rem;">
+          <h2 class="title" style="margin-bottom: 0.25rem;">Overview</h2>
+          <p class="content" style="margin-bottom: 0.5rem;">
+            Prior self-supervised learning (SSL) methods have focused on learning representations for <i>either</i> object recognition or motion understanding, not both.
+            On the other hand, latent dynamics modeling has been used to acquire useful representations of visual observations and their transformations over time, i.e., motion, for control and planning tasks.
+            In this work, we present <b>Midway Network</b>, a new SSL architecture that extends latent dynamics modeling to natural videos to learn strong visual representations for <i>both</i> object recognition and motion understanding.
+            Midway Network handles the complex, multi-object scenes of natural videos by refining inferred motion latents hierarchically in a top-down manner and leveraging a dense forward prediction objective.
+          </p>
+          <h3 class="subtitle is-5" style="margin-top: 0.5rem; margin-bottom: 0.25rem;"><strong>Key contributions</strong></h3>
+          <ul class="content" style="margin-bottom: 0;">
+            <li><b>New architecture</b>: The novel architecture components including dense forward prediction, hierarchical refinement of motion latents, and forward predictor gating units contribute to improved performance.</li>
+            <li><b>Downstream performance</b>: Midway Network achieves strong performance on both semantic segmentation and optical flow tasks compared to prior SSL methods (DynaMo, PooDLe, DoRA, CroCo v2, etc.).</li>
+            <li><b>Latent dynamics analysis</b>: We introduce a novel analysis method based on forwarded feature perturbation to interpret Midway Network's learned motion latents.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Problem -->
-<section class="hero is-small">
-  <div class="hero-body">
+<section class="hero is-small" style="margin: 0; padding: 0;">
+  <div class="hero-body" style="padding-top: 0.25rem;">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <h2 class="title">Coming soon!</h2>
+          <h2 class="title">Learning recognition <i>and</i> motion from natural videos</h2>
           <hr style="border: 0; border-top: 1px solid lightgray;">
         </div>
       </div>
@@ -123,7 +175,15 @@
           <figure class="image">
             <img src="static/images/figure1.png" alt="Figure 1" style="width: 100%; height: auto;">
           </figure>
-          <!-- <figcaption class="has-text-centered" style="margin-top: 10px;"></figcaption> -->
+          <figcaption class="has-text-centered" style="margin-top: 10px;">Comparison between iconic image SSL, dense video SSL, and our proposed Midway Network.</figcaption>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-size-5 is-four-fifths">
+          Object recognition and motion understanding are two intertwined core components of perception, yet most prior work in visual SSL has only focused on <i>one</i> of the two aspects.
+          Image SSL methods (a: <a href="https://arxiv.org/abs/2301.08243" target="_blank">I-JEPA</a>, <a href="https://arxiv.org/abs/2104.14294" target="_blank">DINO</a>, <a href="https://arxiv.org/abs/1911.05722" target="_blank">MoCo</a>, <a href="https://arxiv.org/abs/2002.05709" target="_blank">SimCLR</a>) learn semantic representations from iconic, human-curated images, while video SSL methods (b: <a href="https://arxiv.org/abs/2408.11208" target="_blank">PooDLe</a>, <a href="https://arxiv.org/abs/2310.08584" target="_blank">DoRA</a>, <a href="https://arxiv.org/abs/2003.07990" target="_blank">VINCE</a>) learn from natural videos, yet do not capture information on object motion.
+          SSL methods for learning motion via pixel correspondence (<a href="https://arxiv.org/abs/2006.04902" target="_blank">UFlow</a>, <a href="https://arxiv.org/abs/2105.07014" target="_blank">SMURF</a>) or cross-view reconstruction (<a href="https://arxiv.org/abs/2211.10408" target="_blank">CroCo v2</a>) tasks result in poor recognition features.
+          Drawing inspiration from control and planning (<a href="https://arxiv.org/abs/2409.12192" target="_blank">DynaMo</a>, <a href="https://arxiv.org/abs/2410.11758" target="_blank">LAPA</a>), we propose to leverage latent dynamics modeling to learn representations of video frames and the dynamics between them, i.e., motion.
         </div>
       </div>
     </div>
@@ -131,26 +191,181 @@
 </section>
 <!-- End problem -->
 
+<!-- Architecture -->
+<section class="hero is-small">
+  <div class="hero-body" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Midway Network: hierarchical latent dynamics architecture</h2>
+          <hr style="border: 0; border-top: 1px solid lightgray;">
+        </div>
+      </div>
+      <div class="columns is-centered image-container">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/model-figure.png" alt="Figure 1" style="width: 100%; height: auto;">
+          </figure>
+          <!-- <figcaption class="has-text-centered" style="margin-top: 10px;">Midway Network architecture.</figcaption> -->
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-size-5 is-four-fifths">
+          Midway Network is centered around a <i>midway</i> path that infers motion latents, \(m\), to describe the transformation between a source and target video frame.
+          A vision encoder, e.g., vision transformer, extracts features, \(z_t\), \(z_{t+1}\), from the raw video frames and backward layers refine these features top-down.
+          The forward dynamics model, conditioned on the source backward features \(v_t\) and inferred motion latents, predicts the dense target features.
+          The prediction error, \(||\hat{z}_{t+1} - z_{t+1}||^2_2\), jointly trains all components.
+          Importantly, Midway Network leverages a hierarchical structure where the forward prediction objective is placed at multiple feature levels and predicted features from higher feature levels are used instead of source features to refine motion latents over lower feature levels, reminiscent of iterative refinement over feature pyramids in optical flow methods (<a href="https://arxiv.org/abs/1709.02371" target="_blank">PWCNet</a>, <a href="https://arxiv.org/abs/2006.04902" target="_blank">UFlow</a>).
+          Finally, to encourage the vision encoder to learn rich semantic features by using a joint-embedding invariance objective such as DINO.
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="columns is-vcentered">
+            <div class="column is-two-thirds">
+              <div class="content is-size-5">
+                In standard transformer blocks, the input token is always propagated forward in the same position due to the residual connection, biasing the computation towards the identity. However, we wish for the forward dynamics model to learn if an object at a token(s) has moved, i.e., if its features can be computed from tokens at<i>other</i> positions. Thus, we introduce learnable gating units (MLPs), \(g\), on the residual connection that output vector-wise gating weights between 0 and 1 such that the output of the attention stage is \(h = g(x) \odot x + \text{Attention}(x)\). We use gating units in all but the first transformer block.
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+              <figure class="image">
+                <img src="static/images/gating.png" alt="Gating Unit" style="width: 100%; height: auto;">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End architecture -->
+
+<!-- Results -->
+<section class="hero is-small">
+  <div class="hero-body" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Evaluations: semantic segmentation and optical flow</h2>
+          <hr style="border: 0; border-top: 1px solid lightgray;">
+        </div>
+      </div>
+      <div class="columns is-centered image-container">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/results.png" alt="Figure 1" style="width: 100%; height: auto;">
+          </figure>
+          <figcaption class="has-text-centered" style="margin-top: 10px;">Semantic segmentation (frozen readout) and optical flow (finetuning) evaluations after BDD100K pretraining.</figcaption>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-size-5 is-four-fifths">
+          Midway Network is the only model to achieve strong performance on both semantic segmentation and optical flow tasks overall. Midway Network (enc. only)'s weak performance on optical flow indicates that the pretrained midway inverse and forward dynamics model weights capture useful information for motion estimation. We also demonstrate that downstream performance scales with larger model sizes from ViT-S to ViT-B. Please see Section 4.2 of the <a href="https://arxiv.org/abs/2510.05558" target="_blank">paper</a> for more results from WT-Venice pretraining.
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-half is-centered">
+          <figure>
+            <video poster="" id="tree" autoplay controls muted loop height="100%">
+              <source src="static/videos/bdd-semseg.mp4"
+              type="video/mp4">
+            </video>  
+          </figure>
+          <figcaption class="has-text-centered" style="margin-top: 10px;">Midway Network ViT-B UperNet readout on BDD100K semantic segmentation.</figcaption>
+        </div>
+      </div>
+      <div class="columns is-centered image-container">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/flow.png" alt="Figure 1" style="width: 100%; height: auto;">
+          </figure>
+          <figcaption class="has-text-centered" style="margin-top: 10px;">Midway Network ViT-S on FlyingThings and MPI-Sintel optical flow tasks after finetuning.</figcaption>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End results -->
+
+<!-- Perturbation analysis -->
+<section class="hero is-small">
+  <div class="hero-body" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Analysis: forwarded feature perturbation</h2>
+          <hr style="border: 0; border-top: 1px solid lightgray;">
+        </div>
+      </div>
+      <div class="columns is-centered image-container">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/heatmap-perturbation.png" alt="Figure 1" style="width: 100%; height: auto;">
+          </figure>
+          <figcaption class="has-text-centered" style="margin-top: 10px;">Heatmap shows similarity of forwarded propagation to original propagation. Features are perturbed at green squares in Source (shown in Target at same position for reference). Bottom right (red border) shows that Midway Network without gating units exhibits identity bias.</figcaption>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-size-5 is-four-fifths">
+          We introduce a novel analysis method based on forwarded feature perturbation to analyze the learned the motion latents. Using a trained Midway Network, we compute the source and target features and motion latents as usual. We then randomly perturb a token in the source features and perform forward prediction with the precomputed motion latents to propagate the perturbation to the target features. The cosine similarity between the perturbed and perturbation-propagated target features represents the sensitivity of each token in the target frame to the perturbation. In the examples above, we observe that the highest similarity regions in the target frame correctly match the initial pertubed position in the source frame. We also see that Midway Network without gating units learns the incorrect identity mapping even though the car has moved from the initial green square position.
+        </div>
+      </div>
+      <div class="columns is-centered image-container">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/images/multi-perturbation.png" alt="Figure 1" style="width: 100%; height: auto;">
+          </figure>
+          <figcaption class="has-text-centered" style="margin-top: 10px;">Token-level tracking by using forwarded feature propagation and/or feature similarity. Midway Network can track high-level regions such as the cyclist's foot (top row, pink square).</figcaption>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-size-5 is-four-fifths">
+          We can also use forwarded feature perturbation to perform high-level tracking. Specifically, we iteratively propagate a selected token from a source frame to target frame and update the selected token to be the highest similarity token in the target frame. To reduce noise, we take the top-5 most similar tokens and select the token with highest feature similarity. Midway Network can roughly track high-level regions over time, whereas tracking with feature similarity with DINO-IN1K representations quickly diverges.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End perturbation analysis -->
+
+<!-- Conclusion -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title">Conclusion and next steps</h2>
+          <hr style="border: 0; border-top: 1px solid lightgray;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-size-5 is-four-fifths">
+          We have proposed Midway Network, a new SSL architecture that extends latent dynamics modeling to natural videos to learn strong visual representations for two core and complementary aspects of perception.
+          Exciting next steps include scaling up training data and model size, leveraging the learned motion latents towards control and planning tasks, and improving latent dynamics modeling on natural videos.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End conclusion -->
+
 <!--BibTex citation -->
   <section class="hero is-small" id="BibTeX">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-four-fifths">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{hoang2025midway,
-        title={Midway Network: Learning Representations for Recognition and Motion from Latent Dynamics}, 
-        author={Christopher Hoang and Mengye Ren},
-        year={2025},
-        eprint={TBD},
-        archivePrefix={arXiv},
-        primaryClass={cs.CV}
-  }</code></pre>
-    </div>
+              <h2 class="title">BibTeX</h2>
+              <pre><code>@inproceedings{hoang:2026:midway-network,
+               title={Midway Network: Learning Representations for Recognition and Motion from Latent Dynamics}, 
+               author={Chris Hoang and Mengye Ren},
+               booktitle={International Conference on Learning Representations},  
+               year={2026}}</code></pre>
             </div>
-          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 <!--End BibTex citation -->
 
 
