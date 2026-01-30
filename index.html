@@ -213,10 +213,10 @@
         <div class="column is-size-5 is-four-fifths">
           Midway Network is centered around a <i>midway</i> path that infers motion latents, \(m\), to describe the transformation between a source and target video frame.
           A vision encoder, e.g., vision transformer, extracts features, \(z_t\), \(z_{t+1}\), from the raw video frames and backward layers refine these features top-down.
-          The forward dynamics model, conditioned on the source backward features \(v_t\) and inferred motion latents, predicts the dense target features.
+          The forward dynamics model, conditioned on the source backward features, \(v_t\), and inferred motion latents, predicts the dense target features.
           The prediction error, \(||\hat{z}_{t+1} - z_{t+1}||^2_2\), jointly trains all components.
           Importantly, Midway Network leverages a hierarchical structure where the forward prediction objective is placed at multiple feature levels and predicted features from higher feature levels are used instead of source features to refine motion latents over lower feature levels, reminiscent of iterative refinement over feature pyramids in optical flow methods (<a href="https://arxiv.org/abs/1709.02371" target="_blank">PWCNet</a>, <a href="https://arxiv.org/abs/2006.04902" target="_blank">UFlow</a>).
-          Finally, to encourage the vision encoder to learn rich semantic features by using a joint-embedding invariance objective such as DINO.
+          Finally, to encourage the vision encoder to learn rich semantic features, we use a joint-embedding invariance objective such as DINO.
         </div>
       </div>
       <div class="columns is-centered">
@@ -320,7 +320,7 @@
       </div>
       <div class="columns is-centered">
         <div class="column is-size-5 is-four-fifths">
-          We can also use forwarded feature perturbation to perform high-level tracking. Specifically, we iteratively propagate a selected token from a source frame to target frame and update the selected token to be the highest similarity token in the target frame. To reduce noise, we take the top-5 most similar tokens and select the token with highest feature similarity. Midway Network can roughly track high-level regions over time, whereas tracking with feature similarity with DINO-IN1K representations quickly diverges.
+          We can also use forwarded feature perturbation to perform high-level tracking. Specifically, we iteratively propagate a selected token from a source frame to target frame and update the selected token to be the highest similarity token in the target frame. To reduce noise, we take the top-5 most similar tokens and select the token with highest feature similarity. Midway Network can roughly track high-level regions over time, whereas tracking with DINO-IN1K feature similarity quickly diverges.
         </div>
       </div>
     </div>
